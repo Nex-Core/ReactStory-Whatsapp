@@ -1,0 +1,25 @@
+{
+  "name": "reaction-story",
+  "version": "1.0.0",
+  "description": "WhatsApp bot using @neoxr/baileys - Auto react story only",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "baileys",
+    "neoxr",
+    "whatsapp-bot",
+    "status",
+    "react"
+  ],
+  "author": "Nazir99inf",
+  "license": "ISC",
+  "dependencies": {
+    "@neoxr/baileys": "^8.3.5",
+    "chalk": "^4.1.2",
+    "pino": "^9.4.0"
+  }
+}
