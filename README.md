@@ -2,7 +2,7 @@ ReactStory-Whatsapp
 
 Bot WhatsApp otomatis untuk memberikan reaksi (auto-react) pada status/story teman menggunakan library "@neoxr/baileys". Dilengkapi dengan fitur opsional untuk meneruskan media status ke Telegram.
 
-✨ Fitur Utama
+```✨ Fitur Utama```
 
 - Auto React Story: Memberikan reaksi emoji secara otomatis pada setiap status WhatsApp yang muncul.
 - Custom Emoji: Daftar emoji yang digunakan untuk reaksi bisa diatur sesuai hati di "settings.js".
