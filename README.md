@@ -1,72 +1,155 @@
-ReactStory-Whatsapp
+🚀 ReactStory-Whatsapp
 
-Bot WhatsApp otomatis untuk memberikan reaksi (auto-react) pada status/story teman menggunakan library "@neoxr/baileys". Dilengkapi dengan fitur opsional untuk meneruskan media status ke Telegram.
+Automated WhatsApp bot designed to react intelligently to Status/Story updates using the "@neoxr/baileys" library. Built with modular architecture, performance in mind, and optional Telegram integration for media forwarding.
 
-✨ Fitur Utama
+---
 
-- Auto React Story: Memberikan reaksi emoji secara otomatis pada setiap status WhatsApp yang muncul.
-- Custom Emoji: Daftar emoji yang digunakan untuk reaksi bisa diatur sesuai hati di "settings.js".
-- History Offline Mode: Dirancang untuk memberikan reaksi tanpa mengubah status "Last Seen" kamu secara mencolok.
-- Telegram Forwarder: Opsional untuk mengirim media (gambar/video) dari status WhatsApp ke channel atau chat Telegram secara otomatis.
-- Simple Configuration: Pengaturan mudah dan minimalis, sangat cocok untuk penggunaan di Termux.
+✨ Overview
 
-⚙️ Instalasi di Termux
+ReactStory-Whatsapp adalah bot ringan namun powerful yang secara otomatis memberikan reaksi emoji ke status WhatsApp. Selain itu, bot ini juga mampu meneruskan media (gambar/video) ke Telegram sebagai fitur tambahan.
 
-Salin dan tempel perintah ini satu per satu:
+Dirancang untuk:
 
-1. Update & Install Dependencies
+- ⚡ Performa stabil di Termux / VPS
+- 🧩 Konfigurasi minimal & fleksibel
+- 🔒 Operasi yang tidak mencolok (low profile behavior)
 
-pkg update && pkg upgrade
-pkg install nodejs git
+---
+
+🔑 Key Features
+
+🤖 Auto React Engine
+
+Memberikan reaksi emoji secara otomatis pada setiap status yang terdeteksi.
+
+🎯 Custom Emoji System
+
+Emoji dapat disesuaikan sepenuhnya melalui konfigurasi.
+
+🕵️ Stealth Mode
+
+Mengurangi indikasi aktivitas bot (tidak mengganggu "Last Seen" secara mencolok).
+
+📡 Telegram Forwarder (Optional)
+
+Forward media status ke Telegram (channel / private chat).
+
+⚙️ Minimal Configuration
+
+Struktur konfigurasi sederhana, cocok untuk pemula maupun advanced user.
+
+---
+
+🛠️ Installation (Termux)
+
+Ikuti langkah berikut secara berurutan:
+
+1. Update System & Install Dependencies
+
+pkg update && pkg upgrade -y
+pkg install nodejs git -y
 
 2. Clone Repository
 
 git clone https://github.com/Nex-Core/ReactStory-Whatsapp.git
 cd ReactStory-Whatsapp
 
-3. Install Library
+3. Install Dependencies
 
 npm install
 
-4. Konfigurasi
+4. Configuration
 
 nano settings.js
 
-5. Jalankan Bot
+5. Run Bot
 
 npm start
 
-Silakan scan kode QR yang muncul melalui WhatsApp (Linked Devices).
+Setelah itu, scan QR Code melalui WhatsApp (Linked Devices).
 
-⚙️ Contoh Konfigurasi (settings.js)
+---
+
+⚙️ Configuration Guide
+
+File utama: "settings.js"
 
 global.settings = {
-  autoreact: true,       // Aktifkan auto-react status
-  sendTelegram: false,   // Aktifkan jika ingin meneruskan ke Telegram
+  autoreact: true,       // Enable auto reaction
+  sendTelegram: false,   // Enable Telegram forwarding
 };
 
 global.key = {
   telegram: {
-    token: "62XXXXXXXX:AAHXXXXXXXXXXXX", // Token dari @BotFather
-    chatId: "-12345678",                 // ID chat dari userinfobot
+    token: "YOUR_TELEGRAM_BOT_TOKEN",
+    chatId: "-YOUR_CHAT_ID",
   }
 };
 
-global.emoji = ['🔥', '😍', '😂', '💀', '😎']; // Emoji acak yang akan dikirim
-
-📜 Lisensi
-
-Project ini dilisensikan di bawah ISC License.
-
-❤️ Ucapan Terima Kasih (Special Thanks)
-
-Puji syukur dan rasa terima kasih yang tak terhingga saya sampaikan kepada:
-
-- Allah SWT: Atas segala rahmat, kekuatan, dan petunjuk yang diberikan-Nya sehingga project ini dapat diselesaikan dengan baik. Tiada daya dan upaya kecuali dengan pertolongan-Nya.
-- Orang Tua: Terima kasih yang sangat mendalam kepada Ibu dan mendiang Ayah tercinta. Doa, kasih sayang, dan dukungan kalian adalah fondasi utama serta penyemangat hidup saya dalam setiap langkah dan karya.
-- Teman-Teman: Terima kasih kepada seluruh rekan di komunitas developer, khususnya tim Nex-Core, yang telah berbagi ilmu, inspirasi, dan bantuan teknis selama pengembangan script ini.
-- Nazir: Selaku pengembang asli (original author) dari base script ini.
+global.emoji = ['🔥', '😍', '😂', '💀', '😎'];
 
 ---
 
-Recode & Managed by M. Rafel Pratama
+📂 Project Structure
+
+ReactStory-Whatsapp/
+├── settings.js
+├── index.js
+├── lib/
+├── src/
+├── package.json
+└── README.md
+
+---
+
+⚠️ Best Practices
+
+- Jangan share file "settings.js" (berisi token)
+- Gunakan bot Telegram pribadi (jangan publik)
+- Monitor penggunaan untuk menghindari spam behavior
+- Jalankan di environment stabil (Termux/VPS)
+
+---
+
+📜 License
+
+This project is licensed under the ISC License.
+
+---
+
+🙏 Acknowledgements
+
+Dengan penuh rasa hormat dan terima kasih kepada:
+
+- Allah SWT
+  Atas rahmat, kekuatan, dan kemudahan dalam setiap proses pengembangan.
+
+- Orang Tua
+  Sebagai fondasi utama dalam perjalanan hidup dan inspirasi tanpa batas.
+
+- Nex-Core Team & Developer Community
+  Atas kontribusi ilmu, diskusi, dan dukungan teknis.
+
+- Nazir
+  Sebagai original author dari base script.
+
+---
+
+🧠 Maintainer
+
+Recode & Maintained by:
+M. Rafel Pratama
+
+---
+
+📌 Final Notes
+
+Project ini dibuat dengan pendekatan:
+
+- Clean code
+- Maintainability
+- Real-world usability
+
+Jika ingin kontribusi, silakan fork & pull request.
+
+---
